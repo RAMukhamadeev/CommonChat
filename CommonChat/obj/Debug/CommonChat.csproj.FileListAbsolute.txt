@@ -1,0 +1,10 @@
+c:\users\руслан\documents\visual studio 2013\Projects\CommonChat\CommonChat\bin\Debug\CommonChat.exe.config
+C:\Users\Руслан\Documents\Visual Studio 2013\Projects\CommonChat\CommonChat\obj\Debug\CommonChat.csprojResolveAssemblyReference.cache
+C:\Users\Руслан\Documents\Visual Studio 2013\Projects\CommonChat\CommonChat\obj\Debug\CommonChat.MainForm.resources
+C:\Users\Руслан\Documents\Visual Studio 2013\Projects\CommonChat\CommonChat\obj\Debug\CommonChat.Properties.Resources.resources
+C:\Users\Руслан\Documents\Visual Studio 2013\Projects\CommonChat\CommonChat\obj\Debug\CommonChat.csproj.GenerateResource.Cache
+C:\Users\Руслан\Documents\Visual Studio 2013\Projects\CommonChat\CommonChat\bin\Debug\CommonChat.exe
+C:\Users\Руслан\Documents\Visual Studio 2013\Projects\CommonChat\CommonChat\bin\Debug\CommonChat.pdb
+C:\Users\Руслан\Documents\Visual Studio 2013\Projects\CommonChat\CommonChat\obj\Debug\CommonChat.exe
+C:\Users\Руслан\Documents\Visual Studio 2013\Projects\CommonChat\CommonChat\obj\Debug\CommonChat.pdb
+C:\Users\Руслан\Documents\Visual Studio 2013\Projects\CommonChat\CommonChat\obj\Debug\CommonChat.FormSqlConsole.resources
