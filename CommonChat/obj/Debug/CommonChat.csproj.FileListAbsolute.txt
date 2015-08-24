@@ -8,3 +8,14 @@ C:\Users\Руслан\Documents\Visual Studio 2013\Projects\CommonChat\CommonCha
 C:\Users\Руслан\Documents\Visual Studio 2013\Projects\CommonChat\CommonChat\obj\Debug\CommonChat.exe
 C:\Users\Руслан\Documents\Visual Studio 2013\Projects\CommonChat\CommonChat\obj\Debug\CommonChat.pdb
 C:\Users\Руслан\Documents\Visual Studio 2013\Projects\CommonChat\CommonChat\obj\Debug\CommonChat.FormSqlConsole.resources
+C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\bin\Debug\CommonChat.exe.config
+C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\obj\Debug\CommonChat.exe
+C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\obj\Debug\CommonChat.pdb
+C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\bin\Debug\CommonChat.exe
+C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\bin\Debug\CommonChat.pdb
+C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\obj\Debug\CommonChat.csprojResolveAssemblyReference.cache
+C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\obj\Debug\CommonChat.FormSqlConsole.resources
+C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\obj\Debug\CommonChat.Properties.Resources.resources
+C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\obj\Debug\CommonChat.csproj.GenerateResource.Cache
+C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\obj\Debug\CommonChat.FormRegistration.resources
+C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\obj\Debug\CommonChat.FormMain.resources

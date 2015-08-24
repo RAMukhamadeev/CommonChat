@@ -1,11 +1,67 @@
-﻿using System.Data.SqlClient;
-using System.Windows.Forms;
+﻿using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
 
 namespace CommonChat
 {
     public static class SqlLibrary
     {
-        public static SqlDataReader ExecuteQuery(string queryString)
+        public static DataTable Login(string email, string password)
+        {
+            string query =
+                String.Format(
+                    "SELECT * FROM Users WHERE Email = '{0}' AND PasswordHash = '{1}';", 
+                    email,
+                    CalcHash(password)
+                    );
+            DataTable dt = null;
+            try
+            {
+                dt = ExecuteQuery(query);
+            }
+            catch
+            {
+                // ignored
+            }
+
+            return dt;
+        }
+
+        private static string CalcHash(string password)
+        {
+            long res = password.Aggregate<char, long>(1, (current, t) => ((current + t) * 3557) % 68718952447);
+            return res.ToString();
+        }
+
+        public static string RegistrationOfNewUser(string email, string password, string firstName, string lastName)
+        {
+            string query =
+                String.Format(
+                    "INSERT INTO Users (Email, PasswordHash, FirstName, LastName, DateOfRegistration) VALUES ( N'{0}', '{1}', N'{2}', N'{3}', '{4}');",
+                    email,
+                    CalcHash(password),
+                    firstName,
+                    lastName,
+                    DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+                    );
+
+            string res = "";
+            try
+            {
+                ExecuteQuery(query);
+            }
+            catch (Exception ex)
+            {
+                res += "Регистрация не удалась :( \n" + ex.Message;
+                return res;
+            }
+
+            res += "Регистрация прошла успешно!";
+            return res;
+        }
+
+        public static DataTable ExecuteQuery(string queryString)
         {
             SqlConnectionStringBuilder connPar = new SqlConnectionStringBuilder
             {
@@ -16,14 +72,18 @@ namespace CommonChat
                 UserID = "chat_db_user",
                 Password = "VeryGoodPassword123"
             };
-            SqlDataReader data;
+            
+            DataTable dt = new DataTable();
             using (SqlConnection connection = new SqlConnection(connPar.ToString()))
             {
                 SqlCommand command = new SqlCommand(queryString, connection);
                 connection.Open();
-                data = command.ExecuteReader();
+                SqlDataReader sdr = command.ExecuteReader();
+                dt.Load(sdr);
+                sdr.Close();
             }
-            return data;
+
+            return dt;
         }
     }
 }
