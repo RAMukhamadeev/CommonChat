@@ -1,0 +1,10 @@
+C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\bin\Release\CommonChat.exe.config
+C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\bin\Release\CommonChat.exe
+C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\bin\Release\CommonChat.pdb
+C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\obj\Release\CommonChat.FormRegistration.resources
+C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\obj\Release\CommonChat.FormSqlConsole.resources
+C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\obj\Release\CommonChat.FormMain.resources
+C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\obj\Release\CommonChat.Properties.Resources.resources
+C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\obj\Release\CommonChat.csproj.GenerateResource.Cache
+C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\obj\Release\CommonChat.exe
+C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\obj\Release\CommonChat.pdb

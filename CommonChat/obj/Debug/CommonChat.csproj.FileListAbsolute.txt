@@ -13,7 +13,6 @@ C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\obj\Debug\CommonCha
 C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\obj\Debug\CommonChat.pdb
 C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\bin\Debug\CommonChat.exe
 C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\bin\Debug\CommonChat.pdb
-C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\obj\Debug\CommonChat.csprojResolveAssemblyReference.cache
 C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\obj\Debug\CommonChat.FormSqlConsole.resources
 C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\obj\Debug\CommonChat.Properties.Resources.resources
 C:\Users\Руслан\Documents\GitHub\CommonChat\CommonChat\obj\Debug\CommonChat.csproj.GenerateResource.Cache

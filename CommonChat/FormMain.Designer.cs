@@ -112,7 +112,7 @@
             // регистрацияToolStripMenuItem
             // 
             this.регистрацияToolStripMenuItem.Name = "регистрацияToolStripMenuItem";
-            this.регистрацияToolStripMenuItem.Size = new System.Drawing.Size(226, 36);
+            this.регистрацияToolStripMenuItem.Size = new System.Drawing.Size(244, 36);
             this.регистрацияToolStripMenuItem.Text = "Регистрация";
             this.регистрацияToolStripMenuItem.Click += new System.EventHandler(this.регистрацияToolStripMenuItem_Click);
             // 
@@ -153,40 +153,40 @@
             // lblServerStatusSign
             // 
             this.lblServerStatusSign.AutoSize = true;
-            this.lblServerStatusSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblServerStatusSign.Location = new System.Drawing.Point(38, 137);
+            this.lblServerStatusSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblServerStatusSign.Location = new System.Drawing.Point(38, 150);
             this.lblServerStatusSign.Name = "lblServerStatusSign";
-            this.lblServerStatusSign.Size = new System.Drawing.Size(242, 31);
+            this.lblServerStatusSign.Size = new System.Drawing.Size(202, 29);
             this.lblServerStatusSign.TabIndex = 4;
             this.lblServerStatusSign.Text = "Статус сервера :";
             // 
             // lblUserSign
             // 
             this.lblUserSign.AutoSize = true;
-            this.lblUserSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblUserSign.Location = new System.Drawing.Point(38, 43);
+            this.lblUserSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblUserSign.Location = new System.Drawing.Point(38, 49);
             this.lblUserSign.Name = "lblUserSign";
-            this.lblUserSign.Size = new System.Drawing.Size(70, 31);
+            this.lblUserSign.Size = new System.Drawing.Size(58, 29);
             this.lblUserSign.TabIndex = 5;
             this.lblUserSign.Text = "Вы :";
             // 
             // lblServerStatus
             // 
             this.lblServerStatus.AutoSize = true;
-            this.lblServerStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblServerStatus.Location = new System.Drawing.Point(38, 177);
+            this.lblServerStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblServerStatus.Location = new System.Drawing.Point(253, 150);
             this.lblServerStatus.Name = "lblServerStatus";
-            this.lblServerStatus.Size = new System.Drawing.Size(112, 31);
+            this.lblServerStatus.Size = new System.Drawing.Size(95, 29);
             this.lblServerStatus.TabIndex = 6;
             this.lblServerStatus.Text = "<none>";
             // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblUser.Location = new System.Drawing.Point(38, 83);
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblUser.Location = new System.Drawing.Point(38, 89);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(112, 31);
+            this.lblUser.Size = new System.Drawing.Size(95, 29);
             this.lblUser.TabIndex = 7;
             this.lblUser.Text = "<none>";
             // 
@@ -210,9 +210,9 @@
             this.gbInfo.Controls.Add(this.lblUser);
             this.gbInfo.Controls.Add(this.lblServerStatus);
             this.gbInfo.Controls.Add(this.lblServerStatusSign);
-            this.gbInfo.Location = new System.Drawing.Point(877, 396);
+            this.gbInfo.Location = new System.Drawing.Point(877, 416);
             this.gbInfo.Name = "gbInfo";
-            this.gbInfo.Size = new System.Drawing.Size(863, 240);
+            this.gbInfo.Size = new System.Drawing.Size(863, 215);
             this.gbInfo.TabIndex = 9;
             this.gbInfo.TabStop = false;
             this.gbInfo.Text = "Информация";

@@ -9,7 +9,7 @@ namespace CommonChat
     {
         public static DataTable GetAllMessages()
         {
-            string query = String.Format("SELECT * FROM Messages;");
+            string query = String.Format("SELECT * FROM Messages ORDER BY Number;");
             DataTable dt = null;
             try
             {
@@ -22,12 +22,32 @@ namespace CommonChat
             return dt;
         }
 
-        public static string SendMessage(string email, string message)
+        public static long CountOfMessages()
+        {
+            string query = "SELECT COUNT(*) FROM Messages;";
+            long res = 0;
+
+            try
+            {
+                DataTable dt = ExecuteQuery(query);
+                res = Int64.Parse(dt.Rows[0].ItemArray[0].ToString());
+            }
+            catch
+            {
+                // ignored
+            }
+
+            return res;
+        }
+
+        public static string SendMessage(string email, string firstName, string lastName, string message)
         {
             string query =
                 String.Format(
-                    "INSERT INTO Messages (AuthorEmail, Message, DateOfMessage) VALUES (N'{0}', N'{1}', '{2}');",
+                    "INSERT INTO Messages (AuthorEmail, FirstName, LastName, Message, DateOfMessage) VALUES (N'{0}', N'{1}', N'{2}', N'{3}', '{4}');",
                     email,
+                    firstName,
+                    lastName,
                     message,
                     DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
                     );
