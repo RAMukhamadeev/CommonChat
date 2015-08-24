@@ -1,5 +1,6 @@
 Создание таблицы с пользователями
-CREATE TABLE Users (Email Nvarchar(255) NOT NULL PRIMARY KEY, PasswordHash varchar(255) NOT NULL, FirstName Nvarchar(255), LastName Nvarchar(255), DateOfRegistration datetime);
+CREATE TABLE Users (Email Nvarchar(255) NOT NULL PRIMARY KEY, PasswordHash varchar(255) NOT NULL, FirstName Nvarchar(255), LastName Nvarchar(255), DateOfRegistration datetime NOT NULL);
 
 Создание таблицы с сообщениями чата
-CREATE TABLE Messages (Number long NOT NULL PRIMARY KEY, AuthorEmail Nvarchar(255) NOT NULL, 
+CREATE TABLE Messages (Number TIMESTAMP NOT NULL PRIMARY KEY, AuthorEmail Nvarchar(255) NOT NULL, Message Nvarchar(4000) NOT NULL, DateOfMessage datetime NOT NULL);
+

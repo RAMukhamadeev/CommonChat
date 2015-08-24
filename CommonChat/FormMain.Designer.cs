@@ -44,17 +44,17 @@
             this.lblUser = new System.Windows.Forms.Label();
             this.gbChat = new System.Windows.Forms.GroupBox();
             this.gbInfo = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbSendMessage = new System.Windows.Forms.GroupBox();
             this.gbLogin = new System.Windows.Forms.GroupBox();
-            this.tbEmail = new System.Windows.Forms.TextBox();
-            this.tbPassword = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblPassword = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.tbPassword = new System.Windows.Forms.TextBox();
+            this.tbEmail = new System.Windows.Forms.TextBox();
             this.menuStripMain.SuspendLayout();
             this.gbChat.SuspendLayout();
             this.gbInfo.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbSendMessage.SuspendLayout();
             this.gbLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,7 +112,7 @@
             // регистрацияToolStripMenuItem
             // 
             this.регистрацияToolStripMenuItem.Name = "регистрацияToolStripMenuItem";
-            this.регистрацияToolStripMenuItem.Size = new System.Drawing.Size(244, 36);
+            this.регистрацияToolStripMenuItem.Size = new System.Drawing.Size(226, 36);
             this.регистрацияToolStripMenuItem.Text = "Регистрация";
             this.регистрацияToolStripMenuItem.Click += new System.EventHandler(this.регистрацияToolStripMenuItem_Click);
             // 
@@ -123,6 +123,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rtbChat.Location = new System.Drawing.Point(25, 42);
             this.rtbChat.Name = "rtbChat";
+            this.rtbChat.ReadOnly = true;
             this.rtbChat.Size = new System.Drawing.Size(730, 814);
             this.rtbChat.TabIndex = 1;
             this.rtbChat.Text = "";
@@ -147,6 +148,7 @@
             this.btnSendMessage.TabIndex = 3;
             this.btnSendMessage.Text = "Отправить сообщение";
             this.btnSendMessage.UseVisualStyleBackColor = true;
+            this.btnSendMessage.Click += new System.EventHandler(this.btnSendMessage_Click);
             // 
             // lblServerStatusSign
             // 
@@ -215,18 +217,19 @@
             this.gbInfo.TabStop = false;
             this.gbInfo.Text = "Информация";
             // 
-            // groupBox1
+            // gbSendMessage
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gbSendMessage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.rtbMessage);
-            this.groupBox1.Controls.Add(this.btnSendMessage);
-            this.groupBox1.Location = new System.Drawing.Point(877, 58);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(863, 314);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Отправка сообщения";
+            this.gbSendMessage.Controls.Add(this.rtbMessage);
+            this.gbSendMessage.Controls.Add(this.btnSendMessage);
+            this.gbSendMessage.Enabled = false;
+            this.gbSendMessage.Location = new System.Drawing.Point(877, 58);
+            this.gbSendMessage.Name = "gbSendMessage";
+            this.gbSendMessage.Size = new System.Drawing.Size(863, 314);
+            this.gbSendMessage.TabIndex = 10;
+            this.gbSendMessage.TabStop = false;
+            this.gbSendMessage.Text = "Отправка сообщения";
             // 
             // gbLogin
             // 
@@ -243,38 +246,6 @@
             this.gbLogin.TabStop = false;
             this.gbLogin.Text = "Авторизация";
             // 
-            // tbEmail
-            // 
-            this.tbEmail.Location = new System.Drawing.Point(413, 50);
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(285, 31);
-            this.tbEmail.TabIndex = 0;
-            // 
-            // tbPassword
-            // 
-            this.tbPassword.Location = new System.Drawing.Point(413, 120);
-            this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(285, 31);
-            this.tbPassword.TabIndex = 1;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(170, 53);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(204, 25);
-            this.lblEmail.TabIndex = 2;
-            this.lblEmail.Text = "Введите ваш email:";
-            // 
-            // lblPassword
-            // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(170, 123);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(178, 25);
-            this.lblPassword.TabIndex = 3;
-            this.lblPassword.Text = "Введите пароль:";
-            // 
             // btnLogin
             // 
             this.btnLogin.Location = new System.Drawing.Point(175, 185);
@@ -285,13 +256,45 @@
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Location = new System.Drawing.Point(170, 123);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(178, 25);
+            this.lblPassword.TabIndex = 3;
+            this.lblPassword.Text = "Введите пароль:";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(170, 53);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(204, 25);
+            this.lblEmail.TabIndex = 2;
+            this.lblEmail.Text = "Введите ваш email:";
+            // 
+            // tbPassword
+            // 
+            this.tbPassword.Location = new System.Drawing.Point(413, 120);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Size = new System.Drawing.Size(285, 31);
+            this.tbPassword.TabIndex = 1;
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.Location = new System.Drawing.Point(413, 50);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(285, 31);
+            this.tbEmail.TabIndex = 0;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1779, 974);
             this.Controls.Add(this.gbLogin);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbSendMessage);
             this.Controls.Add(this.gbInfo);
             this.Controls.Add(this.gbChat);
             this.Controls.Add(this.menuStripMain);
@@ -305,7 +308,7 @@
             this.gbChat.ResumeLayout(false);
             this.gbInfo.ResumeLayout(false);
             this.gbInfo.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
+            this.gbSendMessage.ResumeLayout(false);
             this.gbLogin.ResumeLayout(false);
             this.gbLogin.PerformLayout();
             this.ResumeLayout(false);
@@ -331,7 +334,7 @@
         private System.Windows.Forms.ToolStripMenuItem регистрацияToolStripMenuItem;
         private System.Windows.Forms.GroupBox gbChat;
         private System.Windows.Forms.GroupBox gbInfo;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbSendMessage;
         private System.Windows.Forms.GroupBox gbLogin;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblEmail;

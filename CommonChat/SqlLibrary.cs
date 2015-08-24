@@ -7,6 +7,44 @@ namespace CommonChat
 {
     public static class SqlLibrary
     {
+        public static DataTable GetAllMessages()
+        {
+            string query = String.Format("SELECT * FROM Messages;");
+            DataTable dt = null;
+            try
+            {
+                dt = ExecuteQuery(query);
+            }
+            catch
+            {
+                // ignored
+            }
+            return dt;
+        }
+
+        public static string SendMessage(string email, string message)
+        {
+            string query =
+                String.Format(
+                    "INSERT INTO Messages (AuthorEmail, Message, DateOfMessage) VALUES (N'{0}', N'{1}', '{2}');",
+                    email,
+                    message,
+                    DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+                    );
+
+            string res = "";
+            try
+            {
+                ExecuteQuery(query);
+            }
+            catch (Exception ex)
+            {
+                res += "Сообщение отправить не удалось :( \n" + ex.Message;
+            }
+
+            return res;
+        }
+
         public static DataTable Login(string email, string password)
         {
             string query =
