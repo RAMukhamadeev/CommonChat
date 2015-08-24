@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 using System.Windows.Threading;
@@ -32,6 +33,8 @@ namespace CommonChat
                 CurrCountOfMessages = messages;
                 StartUpdateChat();
             }
+
+            RefreshInfo(messages);
         }
 
         void mainTimer_Tick(object sender, EventArgs e)
@@ -50,11 +53,37 @@ namespace CommonChat
 
         private void StartUpdateChat()
         {
-            Thread update = new Thread(RefreshChat);
+            Thread update = new Thread(RefreshChatControl);
             update.Start();
         }
 
-        private void RefreshChat()
+        private void RefreshInfo(long countOfMessages)
+        {
+            try
+            {
+                BeginInvoke(new MethodInvoker(
+                delegate
+                {
+                    if (countOfMessages >= 0)
+                    {
+                        lblServerStatus.Text = "Online";
+                        lblServerStatus.ForeColor = Color.Green;
+                    }
+                    else
+                    {
+                        lblServerStatus.Text = "Offline";
+                        lblServerStatus.ForeColor = Color.Red;
+                    }
+                    gbChat.Text = String.Format("Общий чат ({0} сообщений)", countOfMessages);
+                }));
+            }
+            catch
+            {
+                // ignored
+            }
+        }
+
+        private void RefreshChatControl()
         {
             DataTable dt = SqlLibrary.GetAllMessages();
 
@@ -69,11 +98,13 @@ namespace CommonChat
                        foreach (DataRow record in dt.Rows)
                        {
                            rtbChat.AppendText(record[5] + "\n");
-                           rtbChat.AppendText(String.Format("{0} {1} ({2}) написал : \n", record[2], record[3],
+                           rtbChat.AppendText(String.Format("{0} {1} ({2}) написал(а) : \n", record[2], record[3],
                                record[1]));
                            rtbChat.AppendText(record[4] + "\n");
                            rtbChat.AppendText("\n");
                        }
+                       rtbChat.SelectionStart = rtbChat.Text.Length - 1;
+                       rtbChat.SelectionLength = 0;
                    }
                }));
             }

@@ -25,7 +25,7 @@ namespace CommonChat
         public static long CountOfMessages()
         {
             string query = "SELECT COUNT(*) FROM Messages;";
-            long res = 0;
+            long res;
 
             try
             {
@@ -34,7 +34,7 @@ namespace CommonChat
             }
             catch
             {
-                // ignored
+                res = -1;
             }
 
             return res;
